@@ -1,0 +1,225 @@
+* {margin: 0; border: 0;}
+body {
+    padding: 0;
+    margin: 0;
+    background-color: #f5deb3;
+    font-size: 24px;
+    font-family: Times, serif;
+}
+/* Главная страница */
+.img {
+    background: url(img/img9.jpg) top center no-repeat;
+    background-size: cover;
+    width: 100%; 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    z-index: 0;
+}
+   
+.title {
+    position: relative;
+    width: 100%;
+    text-align: center;
+    color:#fff;
+    z-index: 2;
+    background-color: rgba(2, 2, 2, 0.8);
+    padding: 10px;
+    font-size: 40px;
+}
+    
+.leftimg {
+    float: right;
+    margin: 0 50px 0 0; 
+    border: 4px solid #030303; 
+    alt: "я";
+    width: 220px;
+    height: 340px; 
+}
+
+.footer a{
+    color: rgb(0, 0, 0);
+    text-decoration: none;
+}
+.footer a:hover {
+    color: gray;
+    text-decoration: underline;
+}
+/* Конец главной страницы */
+
+/* Первая страница */
+.text1 {
+    text-align: center;
+    margin: 20px;
+}
+h1 {
+    font-size: 42px; 
+    text-align: center; 
+    margin: 30px 0 20px 25px;
+}
+.Section {
+    text-align: center;
+    font-size: 32px;
+    color: rgb(163, 25, 7);
+    font-weight: bolder;
+}
+.img_hor {
+    width:365x;
+    height: 250px;
+    transition: 1s;
+}
+.img_ver {
+    width:190px;
+    height: 308px;
+    transition: 1s;
+}
+.img_hor:hover,.img_ver:hover {
+    transform: scale(1.5);
+}
+/* Навигация по перой странице */
+
+.navig {
+    text-align: center;
+    padding: 0;
+}
+.navig li {
+    display: inline; 
+    padding: 0 20px; 
+    font-size: 28px;
+    font-style: italic;
+}
+.navig li a {
+    color: rgb(78, 67, 5);
+    text-decoration: none;
+}
+.navig li a:hover{
+    color: gray;
+    text-decoration: none;
+}
+/* Конец первой страницы */
+
+/* Вторая страница */
+.opr {
+    text-decoration: underline;
+}
+.window {
+    color: rgb(151, 12, 12);
+}
+.window:hover {
+    color: gray;
+}
+.text2 {
+    margin: 20px 0 20px 20px;
+   
+}
+/* Модальное окно */
+span {
+    cursor: pointer
+}
+.modal {
+    position: absolute; 
+    width: 300px; 
+    margin-left: -150px; 
+    left: 50%; 
+    top: -100%; 
+    padding: 20px; 
+    background: burlywood; 
+    border: 1px solid rgb(165, 164, 164); 
+    border-radius: 20px;
+    z-index: 999; 
+    transition: all 0.5s ease-in;
+}
+.over {
+    width: 100%; 
+    height: 100%; 
+    z-index: 998; 
+    background: rgba(0,0,0,0.7); 
+    position: fixed; 
+    top: 0;
+    left: -100%;
+}
+input::placeholder {
+    color: grey;
+    line-height: 100px;
+}
+
+/* Конец второй страницы */
+
+/* Создание меню */
+.head {
+    position: fixed;
+    display: block;   
+    margin: 0;
+    background-color:burlywood;
+    width: 100%;
+    text-align: center;
+    padding: 7px;
+    z-index: 995;
+}
+.btn {
+    width: 30px;
+    height: 30px;
+    position: fixed;
+    z-index: 997;
+    overflow: hidden;
+    background-color:  burlywood;
+    padding: 8px;
+    border-radius: 12px;
+}
+.btn span {
+    width: 30px;
+    height: 3px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    background: white;
+    transform: translate(-50%, -50%);
+    transition: all 0.5s;
+}
+.btn span:nth-of-type(2) {
+    top: calc(50% - 7px);
+}
+.btn span:nth-of-type(3) {
+    top: calc(50% + 7px);
+}
+.menu {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    padding: 15px;
+    background-color: burlywood;
+    z-index: 996;
+    transform: translateX(-100%);
+    transition: transform 0.5s;
+}
+.menu.active {
+    transform: translateX(0);
+}
+.menu li {
+    list-style: none;
+    text-align: center;
+    padding: 70px;
+}
+.menu li a {
+    color: rgb(250, 252, 252);
+    font-size: 52px;
+    text-decoration: none;
+}
+.menu li a:hover {
+    color: rgb(132, 132, 138); 
+} 
+.btn.active span:first-of-type {
+    transform: translateX(-100%);
+    opacity: 0;
+}
+.btn.active span:nth-of-type(2) {
+    top: 50%;
+    transform: translate(-50%, -50%) rotate(45deg);
+}
+.btn.active span:nth-of-type(3) {
+    top: 50%;
+    transform: translate(-50%, -50%) rotate(-45deg);
+}
